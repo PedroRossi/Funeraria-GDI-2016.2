@@ -1,6 +1,7 @@
 package models;
 
-import java.util.Date;
+import java.sql.Date;
+import java.util.List;
 
 /**
  * Created by pedro on 28/11/16.
@@ -8,14 +9,16 @@ import java.util.Date;
 public abstract class Pessoa {
 
     private String cpf;
-    private Nome nome;
+    private String primeiroNome;
+    private String nomeFamilia;
     private Date nascimento;
     private String rg;
-    private Telefone telefones;
+    private List<Telefone> telefones;
 
-    public Pessoa(String cpf, Nome nome, Date nascimento, String rg, Telefone telefones) {
+    public Pessoa(String cpf, String primeiroNome, String nomeFamilia, Date nascimento, String rg, List<Telefone> telefones) {
         this.cpf = cpf;
-        this.nome = nome;
+        this.primeiroNome = primeiroNome;
+        this.nomeFamilia = nomeFamilia;
         this.nascimento = nascimento;
         this.rg = rg;
         this.telefones = telefones;
@@ -29,19 +32,27 @@ public abstract class Pessoa {
         this.cpf = cpf;
     }
 
-    public Nome getNome() {
-        return nome;
+    public String getPrimeiroNome() {
+        return primeiroNome;
     }
 
-    public void setNome(Nome nome) {
-        this.nome = nome;
+    public void setPrimeiroNome(String primeiroNome) {
+        this.primeiroNome = primeiroNome;
     }
 
-    public Date getnascimento() {
+    public String getNomeFamilia() {
+        return nomeFamilia;
+    }
+
+    public void setNomeFamilia(String nomeFamilia) {
+        this.nomeFamilia = nomeFamilia;
+    }
+
+    public Date getNascimento() {
         return nascimento;
     }
 
-    public void setnascimento(Date nascimento) {
+    public void setNascimento(Date nascimento) {
         this.nascimento = nascimento;
     }
 
@@ -53,11 +64,11 @@ public abstract class Pessoa {
         this.rg = rg;
     }
 
-    public Telefone getTelefones() {
+    public List<Telefone> getTelefones() {
         return telefones;
     }
 
-    public void setTelefones(Telefone telefones) {
+    public void setTelefones(List<Telefone> telefones) {
         this.telefones = telefones;
     }
 }

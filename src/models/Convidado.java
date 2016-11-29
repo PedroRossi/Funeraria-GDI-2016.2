@@ -6,22 +6,32 @@ package models;
 public class Convidado {
 
     private int id;
-    private Nome nome;
+    private String primeiroNome;
+    private String nomeFamilia;
 
-    public Convidado(int id, Nome nome) {
+    public Convidado(int id, String primeiroNome, String nomeFamilia) {
         this.id = id;
-        this.nome = nome;
+        this.primeiroNome = primeiroNome;
+        this.nomeFamilia = nomeFamilia;
     }
 
     public int getId() {
         return id;
     }
 
-    public Nome getNome() {
-        return nome;
+    public String getPrimeiroNome() {
+        return primeiroNome;
     }
 
-    public void setNome(Nome nome) {
-        this.nome = nome;
+    public void setPrimeiroNome(String primeiroNome) {
+        this.primeiroNome = primeiroNome;
+    }
+
+    public String getNomeFamilia() {
+        return nomeFamilia;
+    }
+
+    public void setNomeFamilia(String nomeFamilia) {
+        this.nomeFamilia = nomeFamilia;
     }
 }

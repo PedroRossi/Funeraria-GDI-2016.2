@@ -1,6 +1,7 @@
 package models;
 
-import java.util.Date;
+import java.sql.Date;
+import java.util.List;
 
 /**
  * Created by pedro on 28/11/16.
@@ -14,8 +15,8 @@ public class Falecido extends Pessoa {
     private Motorista motorista;
     private Date horaTransporte;
 
-    public Falecido(String cpf, Nome nome, Date nascimento, String rg, Telefone telefones, Date obito, double largura, double altura, Carro transporte, Motorista motorista, Date horaTransporte) {
-        super(cpf, nome, nascimento, rg, telefones);
+    public Falecido(String cpf, String primeiroNome, String nomeFamilia, Date nascimento, String rg, List<Telefone> telefones, Date obito, double largura, double altura, Carro transporte, Motorista motorista, Date horaTransporte) {
+        super(cpf, primeiroNome, nomeFamilia, nascimento, rg, telefones);
         this.obito = obito;
         this.largura = largura;
         this.altura = altura;
