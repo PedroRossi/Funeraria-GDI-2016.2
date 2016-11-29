@@ -6,7 +6,7 @@ Dependencias:
 - Oracle SQL DB 11g
 - JavaFX
 
-* Para rodar o db com docker:
-´´´
+*Para rodar o db com docker:
+```
 docker run -d -p 1521:1521 wnameless/oracle-xe-11g
-´´´
+```
